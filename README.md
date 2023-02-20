@@ -94,9 +94,8 @@ For this tutorial, we will deploy the Solana program to devnet. To do so, we mus
 
   Now that you have the program id, open the Anchor.toml file and do the following:
 
-    - Update [programs.localnet] to [programs.devnet].
-    - Update the program id set in my_solana_program with the new program id.
-    - Update the cluster to cluster = "devnet".
+    - Create **[programs.devnet]** section and set ```<project-name> = program id```.
+    - Update the cluster to ```cluster = "devnet"```.
     
   Open the lib.rs file and update the program id used in the declar_id! function.
   
