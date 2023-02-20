@@ -126,7 +126,7 @@ For this tutorial, we will deploy the Solana program to devnet. To do so, we mus
 - ### Generate static client
   
   ```bash
-  anchorpy client-gen path/to/idl.json ./<client-name>
+  anchorpy client-gen path/to/idl.json ./app/<client-name>
   ```
   
 ## Resources
