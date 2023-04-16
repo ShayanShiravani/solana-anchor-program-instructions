@@ -115,6 +115,10 @@ For this tutorial, we will deploy the Solana program to devnet. To do so, we mus
   ```bash
   anchor deploy
   ```
+- ### Closing program and buffer accounts, and reclaiming their lamports
+  
+  If program deployment fails, there will be a hanging intermediate buffer account that contains a non-zero balance. In order to recoup that balance you may resume a failed deployment by providing the same intermediate buffer to a new call to deploy
+  
   ```bash
   ==================================================================================
   Recover the intermediate account's ephemeral keypair file with
@@ -128,6 +132,21 @@ For this tutorial, we will deploy the Solana program to devnet. To do so, we mus
   [BUFFER_ACCOUNT_ADDRESS] argument to `solana program drain`.
   ==================================================================================
   ```
+  To recover the keypair:
+  
+  ```bash
+  solana-keygen recover -o <KEYPAIR_PATH>
+  ```
+  When asked, enter the 12-word seed phrase.
+  
+  ```bash
+  solana program show --programs
+  solana program show --buffers
+  ```
+  ```bash
+  solana program close <BADDRESS>
+  ```
+  
 ## Create a python client for the program
 
 - ### Install AnchorPy
