@@ -146,6 +146,24 @@ For this tutorial, we will deploy the Solana program to devnet. To do so, we mus
   ```bash
   solana program close <BADDRESS>
   ```
+- ### Upgrade program
+  
+  By default, the anchor deploy command will deploy a new Program ID. If you want to upgrade your existing program, use this command
+  
+  ```bash
+  anchor upgrade target/deploy/<PROGRAM_NAME>.so --program-id <PROGRAM_ID>
+  ```
+  
+  - PROGRAM_NAME is the file or name of your generated .so file
+  - PROGRAM_ID is the existing program id you'd like to upgrade to
+
+- ### Remove the Update Authority of a Solana Program
+  
+  Our Program is currently mutable. To change it to be immutable indefinitely, you can remove the update authority using the following command:
+  
+  ```bash
+  solana program set-upgrade-authority <PROGRAM_ID> --final
+  ```
   
 ## Create a python client for the program
 
@@ -166,4 +184,5 @@ For this tutorial, we will deploy the Solana program to devnet. To do so, we mus
 - https://www.anchor-lang.com/docs/installation
 - https://kevinheavey.github.io/anchorpy/
 - https://www.becomebetterprogrammer.com/create-solana-smart-contract/
+- https://www.quicknode.com/guides/solana-development/anchor/how-to-make-immutible-solana-programs/
 
