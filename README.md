@@ -186,4 +186,5 @@ For this tutorial, we will deploy the Solana program to devnet. To do so, we mus
 - https://kevinheavey.github.io/anchorpy/
 - https://www.becomebetterprogrammer.com/create-solana-smart-contract/
 - https://www.quicknode.com/guides/solana-development/anchor/how-to-make-immutible-solana-programs/
+- https://www.quicknode.com/guides/solana-development/anchor/how-to-write-your-first-anchor-program-in-solana-part-1
 
